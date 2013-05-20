@@ -1,0 +1,16 @@
+#------------------------------
+# Exports
+#------------------------------
+
+export EDITOR="vim"
+#export http_proxy=http://f2009619:hkhg874@10.1.9.20:8080/
+#export https_proxy=http://f2009619:hkhg874@10.1.9.20:8080/
+#export ftp_proxy=http://f2009619:hkhg874@10.1.9.20:8080/
+
+#------------------------------
+# Alias stuff
+#------------------------------
+alias l='ls --color=auto -lh'
+alias ll='ls --color=auto -alh'
+alias ..='cd ..'
+
