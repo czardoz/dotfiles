@@ -3,6 +3,9 @@
 #------------------------------
 
 export EDITOR="vim"
+source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=~/venv/
+
 #export http_proxy=http://f2009619:hkhg874@10.1.9.20:8080/
 #export https_proxy=http://f2009619:hkhg874@10.1.9.20:8080/
 #export ftp_proxy=http://f2009619:hkhg874@10.1.9.20:8080/
@@ -12,10 +15,18 @@ export EDITOR="vim"
 #------------------------------
 alias l='ls --color=auto -lh'
 alias ll='ls --color=auto -alh'
+alias ltr='ls --color=auto -ltrh'
 alias ..='cd ..'
 
 #------------------------------
 # History Keybindings
 #------------------------------
-bindkey "^[[A" history-search-backward
-bindkey "^[[B" history-search-forward
+#[[ -n "${key[Up]}"      ]] && bindkey  "${key[Up]}"      history-beginning-search-backward
+#[[ -n "${key[Down]}"    ]] && bindkey  "${key[Down]}"    history-beginning-search-forward
+
+autoload up-line-or-beginning-search
+autoload down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "${key[Up]}" up-line-or-beginning-search
+bindkey "${key[Down]}" down-line-or-beginning-search
