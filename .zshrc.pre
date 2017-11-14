@@ -6,6 +6,7 @@ export EDITOR="vim"
 source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs/
 export PATH=$PATH:/home/aniket/bin
+export PYTHONSTARTUP=~/.pythonrc
 
 #export http_proxy=http://f2009619:hkhg874@10.1.9.20:8080/
 #export https_proxy=http://f2009619:hkhg874@10.1.9.20:8080/
